@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction Page</title>
+    <link rel="stylesheet"
+        href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css">
+    <link rel="stylesheet" href="customer.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-light navbar-light">
+        <a class="navbar-brand" href="./index.html">JKL Bank</a>
+        <button title="Menu button" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">Home</a>
+                </li>
+                <li class="nav-item  active">
+                    <a class="nav-link" href="./customer.html"
+                        style="color: rgb(37, 36, 36)!important; background-color: rgb(180, 178, 178);">Customer
+                        Account</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="my-info text-center">
+        <div class="ab">
+            <h2>Name: Karthick Kumar</h2>
+            <h4>Bank Balance: Rs.<span id="myAccountBalance">75000</span></h4>
+        </div>
+
+        <button class="btn btn-info" data-toggle="modal" data-target="#sendMoney">Send Money</button>
+
+    </div>
+
+
+    <div class="modal fade" id="sendMoney" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Send Money</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="input-group mb-3">
+                            <input type="text" id="enterId" class="form-control" placeholder="Recipient's Id"
+                                aria-label="Recipient's id" aria-describedby="basic-addon2">
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" id="enterName" class="form-control" placeholder="Recipient's username"
+                                aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon2">@email.com</span>
+                            </div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Rs.</span>
+                            </div>
+                            <input type="text" id="enterAmount" class="form-control" placeholder=" Enter Amount"
+                                aria-label="Amount (to the nearest rupees)">
+                            <div class="input-group-append">
+                                <span class="input-group-text">.00</span>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" onClick="sendMoney()" class="btn btn-success" data-dismiss="modal">Send
+                        Money</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="table-responsive">
+            <table class="table  table-bordered">
+                <thead>
+                    <tr class="table-light">
+                        <th scope="col">Sl. No.</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">E-mail</th>
+                        <th scope="col">Bank Balance(in RS.)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="table-ligh">
+                        <td scope="row">1</td>
+                        <td>Hari</td>
+                        <td>hari@email.com</td>
+                        <td>
+                            <p id="hari BankBalance">75000</p>
+                        </td>
+                    </tr>
+                    <tr class="table-inf">
+                        <td scope="row">2</td>
+                        <td>Rajesh</td>
+                        <td>rajesh@email.com</td>
+                        <td>
+                            <p id="rajesh BankBalance">125100</p>
+                        </td>
+                    </tr>
+                    <tr class="table-ligh">
+                        <td scope="row">3</td>
+                        <td>Mukesh</td>
+                        <td>mukesh@email.com</td>
+                        <td>
+                            <p id="mukesh BankBalance">60765</p>
+                        </td>
+                    </tr>
+                    <tr class="table-inf">
+                        <td scope="row">4</td>
+                        <td>Gokul</td>
+                        <td>gokul@email.com</td>
+                        <td>
+                            <p id="gokul BankBalance">60050</p>
+                        </td>
+                    </tr>
+                    <tr class="table-ligh">
+                        <td scope="row">5</td>
+                        <td>Ashwin</td>
+                        <td>ashwin@email.com</td>
+                        <td>
+                            <p id="ashwin BankBalance">63568</p>
+                        </td>
+                    </tr>
+                    <tr class="table-inf">
+                        <td scope="row">6</td>
+                        <td>Deepak</td>
+                        <td>deepak@email.com</td>
+                        <td>
+                            <p id="deepak BankBalance">19000</p>
+                        </td>
+                    </tr>
+                    <tr class="table-ligh">
+                        <td scope="row">7</td>
+                        <td>Vikram</td>
+                        <td>vikram@email.com</td>
+                        <td>
+                            <p id="vikram BankBalance">35600</p>
+                        </td>
+                    </tr>
+                    <tr class="table-inf">
+                        <td scope="row">8</td>
+                        <td>Brithiv</td>
+                        <td>brithiv@email.com</td>
+                        <td>
+                            <p id="brithiv BankBalance">35600</p>
+                        </td>
+                    </tr>
+                    <tr class="table-ligh">
+                        <td scope="row">9</td>
+                        <td>Venkat</td>
+                        <td>venkat@email.com</td>
+                        <td>
+                            <p id="venkat BankBalance">35600</p>
+                        </td>
+                    </tr>
+                    <tr class="table-inf">
+                        <td scope="row">10</td>
+                        <td>Mohan</td>
+                        <td>mohan@email.com</td>
+                        <td>
+                            <p id="mohan BankBalance">15800</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+
+        let myAccountBalance = parseInt(document.getElementById("myAccountBalance").innerText);
+
+        function sendMoney() {
+            var enterName = document.getElementById("enterName").value;
+            var enterAmount = parseInt(document.getElementById("enterAmount").value);
+
+            if (enterAmount > myAccountBalance) {
+                alert("Insufficient Balance.")
+            } else {
+
+                var findUserBankAccount = enterName + " BankBalance";
+                var finalAmount = parseInt(document.getElementById(findUserBankAccount).innerText) + enterAmount;
+                var myAccountBal = myAccountBalance - enterAmount;
+
+                document.getElementById("myAccountBalance").innerText = myAccountBal;
+                document.getElementById(findUserBankAccount).innerHTML = finalAmount;
+                alert('Successful Transaction !!  Rs. ' + enterAmount + ' is sent to ' + enterName + '@email.com.')
+            }
+        }
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"></script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"></script>
+</body>
+
+</html>
